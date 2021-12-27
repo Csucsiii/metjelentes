@@ -87,7 +87,7 @@ public class Main {
         List<String> townNames = getTowns();
         for (String townName: townNames){
             Temperature temperature = getMidTemperature(townName);
-            getTemperatureRange(temperature);
+            setTemperatureRange(temperature);
             System.out.println(temperature.getId() + " Középhőmérséklet: " + temperature.getMidTemp() + ", Hőmérséklet-ingadozás: " + temperature.getTempRange());
         }
     }
@@ -103,7 +103,7 @@ public class Main {
         System.out.println("A fájl elkészült.");
     }
 
-    private static void getTemperatureRange(Temperature temperature){
+    private static void setTemperatureRange(Temperature temperature){
         int min = 1000;
         int max = 0;
 
